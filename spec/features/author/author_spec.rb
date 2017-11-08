@@ -8,5 +8,11 @@ describe "Author page", type: :feature do
     visit author_path(@alan)
   end
 
+  it "page contains last name" do
+  	visit author_path(@alan)
+
+  	expect(page).to have_content('Turing')
+  end
+
   
 end
