@@ -13,4 +13,6 @@ describe "New Author", type: :model do
   
   end
 
+  
+
 end
