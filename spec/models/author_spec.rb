@@ -7,4 +7,10 @@ describe "New Author", type: :model do
   	expect(author.homepage).to eq('http://wikipedia.org/Alan_Turing')
   end
 
+  it "author.name should concat first and last name" do
+  	author = Author.new(first_name:'Alan', last_name:'Turing', homepage:'http://wikipedia.org/Alan_Turing')
+  	expect(author.name).to eq('Alan Turing')
+  
+  end
+
 end
