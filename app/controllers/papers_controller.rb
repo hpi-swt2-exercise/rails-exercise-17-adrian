@@ -38,7 +38,7 @@ def create
   def destroy
   	@paper = Paper.find(params[:id])
     @paper.destroy
-    redirect_to paperss_path
+    redirect_to papers_path
   end
 
 

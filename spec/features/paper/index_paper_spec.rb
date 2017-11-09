@@ -34,6 +34,11 @@ it "Link to the paper creation page" do
     expect(page).to have_css('a', :text => /[dD]estroy/i)
   end
 
+  it "deletee button should not throw error" do
+    visit papers_path
+    click_link 'Destroy'
+  end
+
  
 
 end
