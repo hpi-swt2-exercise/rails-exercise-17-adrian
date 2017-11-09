@@ -20,7 +20,7 @@ describe "New Author", type: :model do
   end
 
   it "have papers" do
-    author = Author.new()
+    author = create :author
     expect(author.papers).to be_empty
   
   end

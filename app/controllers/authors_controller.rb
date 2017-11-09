@@ -9,7 +9,7 @@ class AuthorsController < ApplicationController
   end
 
   def new
-  		@author = Author.new
+  		@author = Author.new()
   end
 
   def edit
@@ -20,7 +20,7 @@ class AuthorsController < ApplicationController
 
 def create
   	@author = Author.new(author_params)
-    
+
   	if @author.save
   		redirect_to @author
   	else
