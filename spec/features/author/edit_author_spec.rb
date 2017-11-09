@@ -8,6 +8,12 @@ describe "Edit author page", type: :feature do
     visit edit_author_path(@alan)
   end
 
+  it "Save changed" do
+    visit edit_author_path(@alan)
+    fill_in 'First name', with: 'Alan Mathison'
+    click_button 'Save author'
+  end
+
   
 
 end
