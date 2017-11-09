@@ -34,7 +34,7 @@
             Author.all, 
             :id, 
             :name, 
-            {selected: @paper.author_ids[i], include_blank: '(none)'}, 
+            {selected: @paper.author_ids[i-1], include_blank: '(none)'}, 
             {name: "paper[author_ids][]", id: "paper_author_id_" + i.to_s} %>
     </p>
   <% end %>
