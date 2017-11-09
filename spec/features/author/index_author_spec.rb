@@ -9,9 +9,14 @@ describe "Author index page", type: :feature do
   before do
   	@alan = create :author
   end
-  it "should render withour error" do
+  it "Should contain godd ol' alan" do
     visit authors_path
     expect(page).to have_content('Alan Turing')
+  end
+
+  it "Should give a link to create new authors" do
+    visit authors_path
+    expect(page).to have_selector('a', :text => "Add Author")
   end
 
 
