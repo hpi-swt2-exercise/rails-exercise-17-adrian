@@ -13,6 +13,12 @@ describe "New Author", type: :model do
   
   end
 
+  it "Should validate" do
+  	author = Author.new(first_name:'Alan', last_name: nil, homepage:'http://wikipedia.org/Alan_Turing')
+  	expect(author.valid?).to eq(false)
   
+  end
+
+
 
 end
