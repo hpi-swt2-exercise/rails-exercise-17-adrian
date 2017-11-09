@@ -23,6 +23,11 @@ describe "Author index page", type: :feature do
     visit authors_path
     expect(page).to have_css('a', :text => /[sS]how/i)
   end
+  it "Link to the author edit page" do
+    visit authors_path
+    expect(page).to have_css('a', :text => /[eE]dit/i)
+  end
+
 
 
 end
