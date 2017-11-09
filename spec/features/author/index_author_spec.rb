@@ -16,7 +16,7 @@ describe "Author index page", type: :feature do
 
   it "Should give a link to create new authors" do
     visit authors_path
-    expect(page).to have_selector('a', :text => "add author")
+    expect(page).to have_css('a', :text => "add author")
   end
 
 
