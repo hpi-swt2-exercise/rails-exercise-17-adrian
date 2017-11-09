@@ -18,4 +18,10 @@ describe "New Paper", type: :model do
   
   end
 
+  it "Should validate year is int" do
+  	paper = Paper.new(title: "title", venue: "Somewhere", year:"hello")
+  	expect(paper.valid?).to eq(false)
+  
+  end
+
 end
