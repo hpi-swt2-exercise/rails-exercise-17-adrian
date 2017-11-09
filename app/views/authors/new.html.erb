@@ -1,5 +1,13 @@
 <h1>new author</h1>
-
+<% if @author.errors.any? %>
+    <p>An error occured</p>
+    
+    <ul>
+        <% @author.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+<% end %>
 <%= form_for :author, url: authors_path do |f| %>
   <p>
     <%= f.label :first_name %><br>
