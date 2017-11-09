@@ -29,4 +29,9 @@ describe "New Paper", type: :model do
   	expect(paper.authors).to be_empty
   end
 
+  it "Should have 1 author" do
+  	paper=create :paper_with_author
+  	expect(paper.authors.length).to eq(1)
+  end
+
 end

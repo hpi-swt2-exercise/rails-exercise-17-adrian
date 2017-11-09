@@ -3,6 +3,14 @@ FactoryGirl.define do
     title "COMPUTING MACHINERY AND INTELLIGENCE"
 venue "Mind 49: 433-460"
 year 1950
+
+  end
+
+  factory :paper_with_author, class: Paper do
+    		title "COMPUTING MACHINERY AND INTELLIGENCE"
+		venue "Mind 49: 433-460"
+		year 1950
+		authors {build_list :author, 1}
   end
 
 end
