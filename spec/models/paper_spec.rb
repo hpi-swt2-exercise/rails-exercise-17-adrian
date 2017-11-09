@@ -24,4 +24,9 @@ describe "New Paper", type: :model do
   
   end
 
+  it "Should have authors" do
+  	paper=Paper.new()
+  	expect(paper.authors).to be_empty
+  end
+
 end

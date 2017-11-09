@@ -9,6 +9,7 @@ class PapersController < ApplicationController
 
   def new
   		@paper = Paper.new
+      
   end
 
   def edit
@@ -18,6 +19,7 @@ class PapersController < ApplicationController
 
 def create
   	@paper = Paper.new(paper_params)
+    @paper.authors=[]
 
   	if @paper.save
   		redirect_to @paper
