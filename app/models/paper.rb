@@ -3,4 +3,8 @@ class Paper < ActiveRecord::Base
   validates :title, presence: true
   validates :venue, presence: true
   validates :year, presence: true,  numericality: { only_integer: true }
+
+  def self.matches_year(year)
+  	return self.all.select{|p| p.year == year}
+  end
 end
