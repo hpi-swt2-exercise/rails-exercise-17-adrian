@@ -8,7 +8,7 @@ class PapersController < ApplicationController
   end
 
   def new
-  		@paper = Paper.new
+  		@paper = Paper.new()
       
   end
 
@@ -19,7 +19,7 @@ class PapersController < ApplicationController
 
 def create
   	@paper = Paper.new(paper_params)
-    @paper.authors=[]
+    
 
   	if @paper.save
   		redirect_to @paper
@@ -46,6 +46,6 @@ def create
 
   private
   def paper_params
-    params.require(:paper).permit(:title, :venue, :year, :author)
+    params.require(:paper).permit(:title, :venue, :year, :author_ids => [])
   end
 end
