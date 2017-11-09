@@ -16,6 +16,24 @@ describe "papers index page", type: :feature do
     expect(page).to have_content(@paper.year)
   end
 
+it "Link to the paper creation page" do
+    visit papers_path
+    expect(page).to have_css('a', :text => /[aA]dd paper/i)
+  end
+  it "Link to the paper details pages" do
+    visit papers_path
+    expect(page).to have_css('a', :text => /[sS]how/i)
+  end
+  it "Link to the paper edit page" do
+    visit papers_path
+    expect(page).to have_css('a', :text => /[eE]dit/i)
+  end
+
+   it "paper entries should have delete button" do
+    visit papers_path
+    expect(page).to have_css('a', :text => /[dD]estroy/i)
+  end
+
  
 
 end
