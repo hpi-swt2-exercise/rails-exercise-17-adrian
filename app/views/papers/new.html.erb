@@ -1,9 +1,9 @@
 <h1>new paper</h1>
-<% if @author.errors.any? %>
+<% if @paper.errors.any? %>
     <p>An error occured</p>
     
     <ul>
-        <% @author.errors.full_messages.each do |msg| %>
+        <% @paper.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
