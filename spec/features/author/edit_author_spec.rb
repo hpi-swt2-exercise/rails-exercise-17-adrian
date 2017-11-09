@@ -11,7 +11,8 @@ describe "Edit author page", type: :feature do
   it "Save changed" do
     visit edit_author_path(@alan)
     fill_in 'First name', with: 'Alan Mathison'
-    click_button 'Save author'
+    click_button 'Save Author'
+    expect(page).to have_content('Alan Mathison')
   end
 
   

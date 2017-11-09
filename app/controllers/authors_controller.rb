@@ -1,12 +1,23 @@
 class AuthorsController < ApplicationController
-  def new
-  		@author = Author.new
+  
+ def index
+  	@authors = Author.all
+  end
+
+ def show
+  	@author = Author.find(params[:id])
   end
 
   def new
   		@author = Author.new
   end
-  def create
+
+  def edit
+  	@author = Author.find(params[:id])
+  end
+
+
+def create
   	@author = Author.new(author_params)
 
   	if @author.save
@@ -16,12 +27,13 @@ class AuthorsController < ApplicationController
   	end
   end
 
-  def show
+  def update
   	@author = Author.find(params[:id])
-  end
-
-  def index
-  	@authors = Author.all
+  	if @author.update(author_params)
+  		redirect_to @author
+  	else
+  		render 'edit'
+  	end
   end
 
 
