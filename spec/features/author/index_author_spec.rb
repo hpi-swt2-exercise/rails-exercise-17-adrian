@@ -28,6 +28,11 @@ describe "Author index page", type: :feature do
     expect(page).to have_css('a', :text => /[eE]dit/i)
   end
 
+   it "Author entried should have delete button" do
+    visit authors_path
+    expect(page).to have_css('a', :text => /[dD]estroy/i)
+  end
+
 
 
 end
